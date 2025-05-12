@@ -1,0 +1,464 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <style>
+
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #0f172a;
+      color: #f1f5f9;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #1e293b;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #38bdf8;
+    }
+    nav a {
+      color: #f1f5f9;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .icons a {
+      margin: 0 10px;
+      color: #38bdf8;
+      font-size: 1.5rem;
+    }
+    .btn {
+      padding: 12px 24px;
+      border: none;
+      background-color: #38bdf8;
+      color: #0f172a;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #0ea5e9;
+    }
+   .services {
+  background-color: #1b263b;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.service-card {
+  background: #415a77;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background-color: #4fc3f7;
+  color: #000;
+}
+
+.service-card i {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: gold;
+  transition: color 0.3s;
+}
+
+.service-card:hover i {
+  color: #000;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+
+
+
+
+.card {
+      background-color: #1e293b;
+      border-radius: 10px;
+      padding: 20px;
+      /* width: 250px; */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      background-color: #334155;
+    }
+    .card i {
+      font-size: 2rem;
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+    }
+    .contact input, .contact textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #1e293b;
+
+    
+   
+    .contact form {
+      display: flex;
+      flex-direction: row;
+    }
+    .contact input, .contact textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #1e293b;
+      color: #f1f5f9;
+    }
+    .contact button {
+      align-self: flex-start;
+    }
+   
+
+   /* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section#projects {
+  padding: 80px 20px;
+  background: linear-gradient(to right, #f9f9f9, #f0f0f0);
+  color: #1e1e2f;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section#projects h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 60px;
+  color: #333;
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+section#projects h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #4a90e2;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  max-width: 340px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.03);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #222;
+  font-weight: 600;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.project-card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.project-card .btn:hover {
+  background: #3a78c2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+}
+
+
+
+.skill-card img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover img {
+  transform: scale(1.1) rotate(5deg);
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact-form">Contact</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h2>Hello, I am</h2>
+    <h1 style="font-size: 2.5rem;">Anil Kumar</h1>
+    <h3>I'm a <span style="color: #38bdf8;">Frontend Developer</span></h3>
+    <div class="icons">
+      <a href="https://www.linkedin.com/in/anilzy"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/anilzy"><i class="fab fa-github"></i></a>
+      <a href="mailto:anilkumarsuansi99@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <br/>
+    <a href="#contact"><button class="btn">Let's Connect</button></a>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate front-end developer focused on creating responsive and interactive user experiences using HTML, CSS, JavaScript, and React.</p>
+  </section>
+
+  <section id="services">
+    <h2>My Services</h2>
+    <div class="services">
+      <div class="card">
+        <i class="fas fa-code"></i>
+        <h3>Responsive Web Design</h3>
+        <p>Designing websites that look great on all devices using modern CSS and media queries.</p>
+      </div>
+      <div class="card">
+        <i class="fab fa-react"></i>
+        <h3>React Development</h3>
+        <p>Building dynamic single-page applications using the React framework.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-paint-brush"></i>
+        <h3>UI/UX Enhancement</h3>
+        <p>Enhancing the design and user experience of websites with clean UI principles.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+ <section id="skills">
+  <!-- <h1>My Skills</h1>
+  <br><br>
+  <div class="skill-grid">
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML Icon">
+      <h3>HTML</h3>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS Icon">
+      <h3>CSS</h3>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript Icon">
+      <h3>JavaScript</h3>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Icon">
+      <h3>React</h3>
+    </div>
+  </div> -->
+
+
+
+  <div id="skills">
+<h1>My Skills</h1>
+    <br>
+<span>HTML,</span>
+<span>CSS,</span>
+<span>
+Javascript,
+</span>
+<span>
+React
+</span>
+
+
+  </div>
+</section>
+
+
+ 
+  <section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+
+    <div class="card project-card">
+      <div class="project-image">
+        <img src="https://www.istockphoto.com/vector/experience-and-knowledge-exchange-gm1285788819-382494659" alt="Global Time Skill Exchange">
+      </div>
+      <h3>Global Time Skill Exchange</h3>
+      <p>A platform to exchange skills across time zones, enabling global collaboration and productivity based on user availability.</p>
+      <a href="https://anilzy.github.io/global-time-zone-skill-exchange/" target="_blank" class="btn">Live Demo</a>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-image">
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Dmaze%2Bgame&psig=AOvVaw02Q6vx2bys-eB8GFNgjBjt&ust=1747115781090000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMiboc2fnY0DFQAAAAAdAAAAABAP" alt="Maze Game">
+      </div>
+      <h3>Maze Game</h3>
+      <p>A fun and interactive logic-based game where players navigate a dynamically generated maze using keyboard controls.</p>
+      <a href=" https://anilzy.github.io/maze-game/" target="_blank" class="btn">Live Demo</a>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-image">
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fdepositphotos.com%2Fphotos%2Fsunshine-weather.html&psig=AOvVaw3OzaLIOCGULBtmKwUt9iO0&ust=1747115828303000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOi02OWfnY0DFQAAAAAdAAAAABAP" alt="Weather App">
+      </div>
+      <h3>Weather App</h3>
+      <p>Real-time weather forecasting app using OpenWeather API with animated UI for a smooth user experience.</p>
+      <a href="https://anilzy.github.io/my-weather-app/" target="_blank" class="btn">Live Demo</a>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-image">
+        <img src="https://www.google.com/url?sa=i&url=http%3A%2F%2Fneptuneholidays.com%2Fworld%2Fcurrency_converter.php&psig=AOvVaw2H_WHvVM-1VPgV3CnjVo_8&ust=1747115907066000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNDHlYignY0DFQAAAAAdAAAAABAE" alt="Currency Converter">
+      </div>
+      <h3>Currency Converter</h3>
+      <p>An elegant tool to convert between global currencies using real-time exchange rates fetched from an API.</p>
+      <a href="https://anilzy.github.io/currencyconvert/" target="_blank" class="btn">Live Demo</a>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-image">
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DG0jO8kUrg-I&psig=AOvVaw0kq7Z16ZBh_xt95vCi-6W9&ust=1747115933367000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOj2tZOgnY0DFQAAAAAdAAAAABAE" alt="Todo List">
+      </div>
+      <h3>Todo List</h3>
+      <p>React-based task manager with local storage support and smooth animations for task creation, editing, and deletion.</p>
+      <a href="https://anilzy.github.io/to-do-list/" target="_blank" class="btn">Live Demo</a>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-image">
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dj59qQ7YWLxw&psig=AOvVaw3IUCCDrM0hhqA_zyXd5rjC&ust=1747115962494000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOD_76SgnY0DFQAAAAAdAAAAABAE" alt="Calculator">
+      </div>
+      <h3>Calculator</h3>
+      <p>A lightweight calculator application supporting basic arithmetic operations with responsive UI and keyboard input.</p>
+      <a href=" https://anilzy.github.io/calculator/" target="_blank" class="btn">Live Demo</a>
+    </div>
+
+  </div>
+</section>
+
+  <section id="contact-form" class="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+
+ <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+  </script> -->
+
+</body>
+</html>
